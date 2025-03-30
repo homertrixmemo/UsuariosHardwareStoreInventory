@@ -1,0 +1,411 @@
+/* ======================
+   VARIABLES GLOBALES
+   ====================== */
+:root {
+    --amarillo: #F4D03F;
+    --gris-oscuro: #333;
+    --naranja: #E67E22;
+    --naranja-oscuro: #D35400;
+    --rojo: #C0392B;
+    --rojo-oscuro: #A93226;
+    --verde: #27AE60;
+    --verde-oscuro: #1E8449;
+    --azul: #007bff;
+    --azul-oscuro: #0056b3;
+    --gris-claro: #ccc;
+    --blanco: #fff;
+}
+
+/* ======================
+   ESTILOS GENERALES
+   ====================== */
+body {
+    background-color: var(--amarillo);
+    color: var(--gris-oscuro);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======================
+   BARRA DE NAVEGACIÓN
+   ====================== */
+.navbar {
+    background-color: var(--gris-oscuro);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+/* ======================
+   CONTENEDOR PRINCIPAL
+   ====================== */
+.contenedor {
+    text-align: center;
+    padding: 20px;
+}
+
+/* ======================
+   TARJETAS DE MENÚ
+   ====================== */
+.card {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h5 {
+    color: var(--amarillo);
+}
+
+/* ======================
+   BOTONES
+   ====================== */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--blanco);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton-primario {
+    background-color: var(--naranja);
+}
+.boton-primario:hover {
+    background-color: var(--naranja-oscuro);
+}
+
+.boton-secundario {
+    background-color: var(--verde);
+}
+.boton-secundario:hover {
+    background-color: var(--verde-oscuro);
+}
+
+.boton-terciario {
+    background-color: var(--azul);
+}
+.boton-terciario:hover {
+    background-color: var(--azul-oscuro);
+}
+
+.boton-info {
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+}
+.boton-info:hover {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+}
+
+.boton-editar {
+    background-color: var(--amarillo);
+    color: var(--gris-oscuro);
+}
+.boton-editar:hover {
+    background-color: #d4b10a;
+}
+
+.boton-eliminar {
+    background-color: var(--rojo);
+}
+.boton-eliminar:hover {
+    background-color: var(--rojo-oscuro);
+}
+
+/* ======================
+   TABLAS
+   ====================== */
+.tabla-contenedor {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+}
+
+.tabla th, .tabla td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla th {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+}
+
+/* ======================
+   PIE DE PÁGINA
+   ====================== */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    text-align: center;
+}
+
+footer a {
+    color: var(--azul);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--azul-oscuro);
+}
+
+/* ======================
+   FORMULARIOS
+   ====================== */
+.card-form, .formulario-editar, .form-container {
+    background-color: var(--gris-oscuro);
+    padding: 25px;
+    border-radius: 10px;
+    width: 40%;
+    margin: 50px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: var(--blanco);
+    text-align: left;
+}
+
+.card-form input, .card-form select,
+.formulario-editar input, .formulario-editar select,
+.input-field, .textarea-field {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+}
+
+/* Ajuste para textarea */
+.textarea-field {
+    resize: none;
+}
+
+/* Botones del formulario */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-save {
+    background-color: var(--naranja);
+    color: var(--blanco);
+}
+.btn-save:hover {
+    background-color: var(--naranja-oscuro);
+}
+
+.btn-cancel {
+    background-color: var(--rojo);
+}
+.btn-cancel:hover {
+    background-color: var(--rojo-oscuro);
+}
+
+/* ======================
+   ESTILO PARA CONFIRMACIONES
+   ====================== */
+.delete-bg {
+    background-color: #222;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.delete-card {
+    background-color: var(--gris-oscuro);
+    padding: 25px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: auto;
+}
+
+.delete-error {
+    background-color: var(--rojo);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--blanco);
+}
+
+/* Botones */
+.delete-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.delete-btn-danger {
+    background-color: var(--rojo);
+}
+.delete-btn-danger:hover {
+    background-color: var(--rojo-oscuro);
+}
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4c542;
+    color: #333;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #333;
+    padding: 15px;
+}
+
+.navbar .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background 0.3s;
+}
+
+.nav-menu li a:hover {
+    background-color: #f4c542;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Tarjetas */
+.card-contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+/* Botones */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.boton-primario {
+    background-color: #ff7f27;
+    color: white;
+}
+
+.boton-primario:hover {
+    background-color: #ff5400;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer .enlace-github {
+    color: #ff7f27;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer .enlace-github:hover {
+    color: #ff5400;
+}
